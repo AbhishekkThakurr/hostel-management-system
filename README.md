@@ -2,7 +2,7 @@
 
 A console-based Java app for managing hostel rooms and students — add rooms, register students, allocate rooms, and track who lives where.
 
-**Status: Week 3 project, in progress (Day 1 of 7 done).**
+**Status: Week 3 project, in progress (Day 2 of 7 done).**
 
 ## Features (so far)
 - Add a room with a room number and bed capacity
@@ -11,12 +11,16 @@ A console-based Java app for managing hostel rooms and students — add rooms, r
 - List all rooms with capacity, occupied beds, and free beds
 - List all students with their allocated room (or "Not allocated")
 - Duplicate room numbers and duplicate roll numbers are rejected
+- View allocations: allocated students with their rooms, plus who is still waiting
+- Search a student by roll number or part of their name
+- Search a room by number to see its occupants by name
+- Vacancy check: free beds per room, total free beds, and full-room count
 
 ## Build plan for the week
 | Day | Work |
 | --- | --- |
 | 1 | Project setup, Student and Room models, add / allocate / list ✅ |
-| 2 | View allocations, search student or room, vacancy check |
+| 2 | View allocations, search student or room, vacancy check ✅ |
 | 3 | Save and load students and rooms from CSV files |
 | 4 | Occupancy and fees report |
 | 5 | Input validation and a cleaner menu |
@@ -24,7 +28,7 @@ A console-based Java app for managing hostel rooms and students — add rooms, r
 | 7 | Final polish, sample data, complete README |
 
 ## Concepts used
-Classes and objects, ArrayList, loops, switch, Scanner input, and basic validation (blank checks, duplicate checks, NumberFormatException handling).
+Classes and objects, ArrayList, loops, switch, Scanner input, and basic validation (blank checks, duplicate checks, NumberFormatException handling). Search uses case-insensitive matching and partial name matching with `contains`.
 
 ## How to run
 ```bash
@@ -41,7 +45,11 @@ Rooms: 0  |  Students: 0
 3. Allocate a room to a student
 4. List all rooms
 5. List all students
-6. Exit
+6. View allocations
+7. Search student
+8. Search room
+9. Vacancy check
+10. Exit
 Choose an option: 1
 Enter room number: A-101
 Enter room capacity (number of beds): 3
